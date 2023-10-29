@@ -7,6 +7,8 @@ module.exports = {
 	},
 	plugins: ['@typescript-eslint'],
 	extends: [
+		'airbnb-typescript',
+		'eslint:recommended',
 		'plugin:@typescript-eslint/recommended'
 		// "plugin:prettier/recommended"
 	],
@@ -22,12 +24,16 @@ module.exports = {
 		semi: ['error', 'never'],
 		'comma-dangle': ['error', 'never'],
 		quotes: ['error', 'single'],
+		'no-mixed-spaces-and-tabs': ['error', 'smart-tabs'],
+		'@typescript-eslint/indent': 'off',
+		'@typescript-eslint/comma-dangle': 'off',
 		'@typescript-eslint/interface-name-prefix': 'off',
 		'@typescript-eslint/explicit-function-return-type': 'off',
 		'@typescript-eslint/explicit-module-boundary-types': 'off',
 		'@typescript-eslint/no-explicit-any': 'off',
 		'no-tabs': 'off',
-		'space-before-function-paren': 'off',
+		// 'space-before-function-paren': 'off',
+		'@typescript-eslint/semi': ['error', 'never'],
 		'no-trailing-spaces': 'off'
 	}
 }
