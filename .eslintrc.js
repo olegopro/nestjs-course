@@ -21,7 +21,7 @@ module.exports = {
     },
     ignorePatterns: ['.eslintrc.js'],
     rules: {
-        indent: ['error', 4],
+        "indent": "off",
         'object-curly-spacing': ['error', 'always'],
         semi: ['error', 'never'],
         'comma-dangle': ['error', 'never'],
