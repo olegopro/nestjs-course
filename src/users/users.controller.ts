@@ -1,8 +1,10 @@
-import { Controller } from "@nestjs/common"
+import { Controller, Get } from '@nestjs/common'
 
-@Controller("users")
+@Controller('users')
 export class UsersController {
+    
+  @Get()
     getUsers(): any {
-        return []
+        return [{ id: 0 }]
     }
 }
