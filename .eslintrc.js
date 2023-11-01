@@ -6,13 +6,14 @@ module.exports = {
         sourceType: 'module'
     },
     plugins: ['@typescript-eslint'],
+
     extends: [
-        'airbnb-typescript/base',
-        'eslint:recommended',
-        'plugin:@typescript-eslint/recommended',
         'plugin:import/errors',
-        'plugin:import/warnings'
-        // "plugin:prettier/recommended"
+        'plugin:import/warnings',
+        'plugin:@typescript-eslint/recommended',
+        'eslint:recommended',
+        'airbnb-typescript/base',
+        'standard'
     ],
     root: true,
     env: {
@@ -21,14 +22,14 @@ module.exports = {
     },
     ignorePatterns: ['.eslintrc.js'],
     rules: {
-        "indent": "off",
+        'indent': 'off',
         'object-curly-spacing': ['error', 'always'],
-        semi: ['error', 'never'],
+        'semi': ['error', 'never'],
         'comma-dangle': ['error', 'never'],
-        quotes: ['error', 'single'],
-        "arrow-parens": ["error", "as-needed"],
-        "@typescript-eslint/no-unused-vars": ["warn"],
-        "no-unused-vars": ["warn"],
+        'quotes': ['error', 'single'],
+        'arrow-parens': ['error', 'as-needed'],
+        '@typescript-eslint/no-unused-vars': ['warn'],
+        'no-unused-vars': ['warn'],
         'no-mixed-spaces-and-tabs': ['error', 'smart-tabs'],
         '@typescript-eslint/indent': 'off',
         '@typescript-eslint/comma-dangle': 'off',
@@ -38,6 +39,7 @@ module.exports = {
         '@typescript-eslint/no-explicit-any': 'off',
         'no-tabs': 'off',
         '@typescript-eslint/semi': ['error', 'never'],
-        'no-trailing-spaces': 'off'
+        'no-trailing-spaces': 'off',
+        'space-before-function-paren': ['error', 'never']
     }
 }
