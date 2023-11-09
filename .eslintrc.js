@@ -22,11 +22,11 @@ module.exports = {
     },
     ignorePatterns: ['.eslintrc.js'],
     rules: {
-        indent: 'off',
+        'indent': ['error', 4, { "SwitchCase": 1 }],
         'object-curly-spacing': ['error', 'always'],
-        semi: ['error', 'never'],
+        'semi': ['error', 'never'],
         'comma-dangle': ['error', 'never'],
-        quotes: ['error', 'single'],
+        'quotes': ['error', 'single'],
         'arrow-parens': ['error', 'as-needed'],
         '@typescript-eslint/no-unused-vars': ['warn'],
         'no-unused-vars': ['warn'],
@@ -41,6 +41,12 @@ module.exports = {
         'no-tabs': 'off',
         '@typescript-eslint/semi': ['error', 'never'],
         'no-trailing-spaces': 'off',
-        'space-before-function-paren': ['error', 'never']
+        'space-before-function-paren': [
+            'error', {
+                'anonymous': 'always',
+                'named': 'never',
+                'asyncArrow': 'always'
+            }
+        ]
     }
 }

@@ -5,8 +5,8 @@ export class CreateUserDto {
     @ApiProperty()
     @IsAlphanumeric()
     @MaxLength(10)
-    name: string
+        name: string
 
     @ApiProperty({ required: false })
-    age?: number
+        age?: number
 }
